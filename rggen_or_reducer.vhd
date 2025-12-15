@@ -33,7 +33,7 @@ begin
 
   g_reducer: if (NEXT_N > 1) generate
   begin
-    u_reducer: entity work.rggen_or_reducer
+    u_reducer: entity rggen_rtl.rggen_or_reducer
       generic map (
         WIDTH => WIDTH,
         N     => NEXT_N

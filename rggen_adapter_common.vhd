@@ -196,7 +196,7 @@ begin
       end loop;
     end process;
 
-    u_response_mux: entity work.rggen_mux
+    u_response_mux: entity rggen_rtl.rggen_mux
       generic map (
         WIDTH   => RESPONSE_WIDTH,
         ENTRIES => REGISTERS
@@ -227,7 +227,7 @@ begin
       end loop;
     end process;
 
-    u_response_mux: entity work.rggen_mux
+    u_response_mux: entity rggen_rtl.rggen_mux
       generic map (
         WIDTH   => RESPONSE_WIDTH,
         ENTRIES => REGISTERS

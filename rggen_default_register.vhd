@@ -38,7 +38,7 @@ end rggen_default_register;
 
 architecture rtl of rggen_default_register is
 begin
-  u_register_common: entity work.rggen_register_common
+  u_register_common: entity rggen_rtl.rggen_register_common
     generic map (
       READABLE        => READABLE,
       WRITABLE        => WRITABLE,

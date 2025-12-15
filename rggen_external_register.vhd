@@ -81,7 +81,7 @@ architecture rtl of rggen_external_register is
   signal  external_strobe:      std_logic_vector(STROBE_WIDTH - 1 downto 0);
 begin
   --  Decode address
-  u_decoder: entity work.rggen_address_decoder
+  u_decoder: entity rggen_rtl.rggen_address_decoder
     generic map (
       READABLE      => true,
       WRITABLE      => true,

@@ -87,7 +87,7 @@ begin
   end process;
 
   -- Common
-  u_adapter_common: entity work.rggen_adapter_common
+  u_adapter_common: entity rggen_rtl.rggen_adapter_common
     generic map (
       ADDRESS_WIDTH       => ADDRESS_WIDTH,
       LOCAL_ADDRESS_WIDTH => LOCAL_ADDRESS_WIDTH,

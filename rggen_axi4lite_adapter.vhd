@@ -120,7 +120,7 @@ architecture rtl of rggen_axi4lite_adapter is
   signal  response_status:        std_logic_vector(1 downto 0);
 begin
   --  Buffer
-  u_buffer: entity work.rggen_axi4lite_skid_buffer
+  u_buffer: entity rggen_rtl.rggen_axi4lite_skid_buffer
     generic map (
       ID_WIDTH      => ID_WIDTH,
       ADDRESS_WIDTH => ADDRESS_WIDTH,
@@ -261,7 +261,7 @@ begin
   end process;
 
   -- Common
-  u_adapter_common: entity work.rggen_adapter_common
+  u_adapter_common: entity rggen_rtl.rggen_adapter_common
     generic map (
       ADDRESS_WIDTH       => ADDRESS_WIDTH,
       LOCAL_ADDRESS_WIDTH => LOCAL_ADDRESS_WIDTH,

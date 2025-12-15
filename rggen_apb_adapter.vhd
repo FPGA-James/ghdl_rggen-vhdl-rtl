@@ -2,7 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-use work.rggen_rtl.all;
+library rggen_rtl;
+use rggen_rtl.rggen_rtl.all;
 
 entity rggen_apb_adaper is
   generic (
@@ -83,7 +84,7 @@ begin
     end if;
   end process;
 
-  u_adapter_common: entity work.rggen_adapter_common
+  u_adapter_common: entity rggen_rtl.rggen_adapter_common
     generic map (
       ADDRESS_WIDTH       => ADDRESS_WIDTH,
       LOCAL_ADDRESS_WIDTH => LOCAL_ADDRESS_WIDTH,

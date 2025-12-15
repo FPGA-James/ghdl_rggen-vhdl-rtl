@@ -31,7 +31,7 @@ begin
       end loop;
     end process;
 
-    u_reducer: entity work.rggen_or_reducer
+    u_reducer: entity rggen_rtl.rggen_or_reducer
       generic map (
         WIDTH => WIDTH,
         N     => ENTRIES

@@ -43,7 +43,7 @@ architecture rtl of rggen_indirect_register is
 begin
   additional_match  <= '1' when unsigned(not i_indirect_match) = 0 else '0';
 
-  u_register_common: entity work.rggen_register_common
+  u_register_common: entity rggen_rtl.rggen_register_common
     generic map (
       READABLE              => READABLE,
       WRITABLE              => WRITABLE,

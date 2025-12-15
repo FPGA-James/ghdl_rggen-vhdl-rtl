@@ -141,7 +141,7 @@ begin
 
   g_decoder: for i in 0 to WORDS - 1 generate
   begin
-    u_decoder: entity work.rggen_address_decoder
+    u_decoder: entity rggen_rtl.rggen_address_decoder
       generic map (
         READABLE              => READABLE,
         WRITABLE              => WRITABLE,
@@ -181,7 +181,7 @@ begin
 
   register_ready  <= (not backdoor_valid) and active;
 
-  u_read_data_mux: entity work.rggen_mux
+  u_read_data_mux: entity rggen_rtl.rggen_mux
     generic map (
       WIDTH   => BUS_WIDTH,
       ENTRIES => WORDS
